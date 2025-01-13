@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PetitionList from './components/PetitionList';
+import CreatePetition from './components/CreatePetition';
 import Register from './components/Register';
 import Login from './components/Login';
 import CommitteeDashboard from './components/CommitteeDashboard';
@@ -34,6 +35,7 @@ const App = () => {
                         isAuthenticated ? (
                             <>
                                 {user?.role === 'admin' && <CommitteeDashboard token={token} />}
+                                {user?.role === 'user' && <CreatePetition token={token} />}
                                 {user?.role === 'user' && <PetitionList token={token} />}
                             </>
                         ) : (

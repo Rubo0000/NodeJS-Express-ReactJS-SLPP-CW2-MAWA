@@ -67,3 +67,39 @@ body {
       padding: 30px;
   }
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #333;
+  height: 100vh;
+  overflow: auto;
+}
+
+h4 {
+  color: #fff;
+  text-align: center;
+}
+
+.MuiCard-root {
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.MuiCard-root:hover {
+  transform: scale(1.05);
+}
+
+button {
+  text-transform: none;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.grid-container {
+  justify-content: center;
+}

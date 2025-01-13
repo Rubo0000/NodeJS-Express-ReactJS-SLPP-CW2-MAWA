@@ -49,8 +49,9 @@ const CreatePetition = ({ token }) => {
                     onChange={handleChange}
                     fullWidth
                     required
+                    style={{ marginTop: '10px', marginBottom: '20px' }}
                 />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="primary"  style={{ marginTop: '20px', marginBottom: '20px' }}>
                     Create Petition
                 </Button>
             </form>
