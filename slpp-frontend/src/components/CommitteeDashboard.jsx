@@ -48,7 +48,6 @@ const CommitteeDashboard = ({ token }) => {
 
     const closePetition = (id) => {
         const response = responses[id] || 'Default response';
- // Get the response for this petition
         axios.post(
             `http://localhost:5000/slpp/petitions/${id}/close`,
             { response },
@@ -101,7 +100,6 @@ const CommitteeDashboard = ({ token }) => {
                     height: '95vh',
                 }}
             >
-                {/* Header Section */}
                 <Typography
                     variant="h4"
                     align="center"
@@ -110,8 +108,6 @@ const CommitteeDashboard = ({ token }) => {
                 >
                     Petitions Committee Dashboard
                 </Typography>
-
-                {/* Update Threshold Section */}
                 <Box
                     sx={{
                         display: 'flex',
@@ -146,7 +142,6 @@ const CommitteeDashboard = ({ token }) => {
                     </Box>
                 </Box>
 
-                {/* Petition List Section */}
                 <Box sx={{ flex: 1, overflowY: 'auto', marginTop: '20px' }}>
                     <Grid container spacing={2}>
                         {petitions.map((petition) => (

@@ -10,12 +10,11 @@ const App = () => {
     const [token, setToken] = useState('');
     const [user, setUser] = useState(null);
 
-    const isAuthenticated = !!token; // Determina si el usuario está autenticado
+    const isAuthenticated = !!token; 
 
     return (
         <Router>
             <Routes>
-                {/* Rutas públicas */}
                 <Route
                     path="/login"
                     element={
@@ -26,8 +25,6 @@ const App = () => {
                     path="/register"
                     element={isAuthenticated ? <Navigate to="/dashboard" /> : <Register />}
                 />
-
-                {/* Rutas privadas */}
                 <Route
                     path="/dashboard"
                     element={
@@ -41,8 +38,6 @@ const App = () => {
                         )
                     }
                 />
-
-                {/* Redirección por defecto */}
                 <Route path="*" element={<Navigate to="/login" />} />
             </Routes>
         </Router>

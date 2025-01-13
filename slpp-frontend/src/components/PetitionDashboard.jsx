@@ -23,7 +23,6 @@ const PetitionDashboard = ({ token }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [filterStatus, setFilterStatus] = useState('');
 
-    // Fetch petitions
     useEffect(() => {
         const fetchPetitions = async () => {
             try {
@@ -46,7 +45,7 @@ const PetitionDashboard = ({ token }) => {
                 {},
                 {
                     headers: {
-                        Authorization: token, // Ensure the user is authenticated
+                        Authorization: token, 
                     },
                 }
             );
@@ -67,12 +66,12 @@ const PetitionDashboard = ({ token }) => {
                 formData,
                 {
                     headers: {
-                        Authorization: token // Envía el token en los headers
+                        Authorization: token 
                     }
                 }
             );
             setFormData({ title: '', content: '' });
-            setPetitions([...petitions, response.data.petition]); // Añade la nueva petición al listado
+            setPetitions([...petitions, response.data.petition]); 
         } catch (error) {
             alert(error.response?.data?.error || 'Something went wrong');
         }
@@ -103,7 +102,6 @@ const PetitionDashboard = ({ token }) => {
                     height: '95vh',
                 }}
             >
-                {/* Create Petition Section */}
                 <Box sx={{ marginBottom: '30px', flexShrink: 0 }}>
                     <Typography variant="h4" color="black" gutterBottom align="center">
                         Create Petition
@@ -141,11 +139,10 @@ const PetitionDashboard = ({ token }) => {
                     </form>
                 </Box>
 
-                {/* Petition List Section */}
                 <Box
                     sx={{
                         flex: 1,
-                        overflowY: 'auto', // Allow vertical scrolling
+                        overflowY: 'auto', 
                         marginTop: '20px',
                     }}
                 >
