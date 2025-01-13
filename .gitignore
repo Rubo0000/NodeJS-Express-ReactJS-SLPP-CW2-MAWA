@@ -1,0 +1,7 @@
+slpp-backend/.env
+slpp-backend/server.js
+slpp-backend/db/database.js
+slpp-backend/middleware/auth.js
+slpp-backend/node_modules
+slpp-backend/routes/petitions.js
+slpp-frontend/.gitignore
