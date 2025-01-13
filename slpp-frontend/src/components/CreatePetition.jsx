@@ -24,7 +24,6 @@ const CreatePetition = ({ token }) => {
                     }
                 }
             );
-            alert(response.data.message);
         } catch (error) {
             alert(error.response.data.error || 'Something went wrong');
         }

@@ -16,7 +16,6 @@ const Login = ({ setToken, setUser }) => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5000/slpp/login', formData);
-            alert(response.data.message);
             setToken(response.data.token);
             setUser(response.data.user);
         } catch (error) {

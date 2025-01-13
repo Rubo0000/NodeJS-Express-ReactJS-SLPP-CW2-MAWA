@@ -34,7 +34,6 @@ const PetitionList = ({ token }) => {
                     },
                 }
             );
-            alert(response.data.message);
             // Optionally, refetch the petitions to update the signature count
             const updatedPetitions = petitions.map((petition) =>
                 petition.petition_id === id ? { ...petition, signatures: petition.signatures + 1 } : petition
