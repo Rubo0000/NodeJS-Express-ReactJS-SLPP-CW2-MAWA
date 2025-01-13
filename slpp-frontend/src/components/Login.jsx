@@ -27,6 +27,7 @@ const Login = ({ setToken, setUser }) => {
     return (
         <div className="auth-container">
             <div className="auth-form">
+                <Typography variant="h3" gutterBottom>Welcome to SLPP</Typography>
                 <Typography variant="h4" gutterBottom>Login</Typography>
                 <form onSubmit={handleSubmit}>
                     <TextField
@@ -45,14 +46,14 @@ const Login = ({ setToken, setUser }) => {
                         onChange={handleChange}
                         fullWidth
                         required
-                        style={{ marginTop: '10px' }}
+                        style={{ marginTop: '20px', marginBottom: '20px' }}
                     />
-                    <Button type="submit" variant="contained" color="primary" className="auth-button">
+                    <Button type="submit" variant="contained" className="auth-button" fullWidth>
                         Login
                     </Button>
                 </form>
-                <Typography variant="body2" style={{ marginTop: '10px' }}>
-                    Don't have an account? <a href="/register" style={{ color: '#2575fc' }}>Register</a>
+                <Typography variant="body2" style={{ marginTop: '20px' }}>
+                    Don't have an account? <a href="/register">Register</a>
                 </Typography>
             </div>
         </div>

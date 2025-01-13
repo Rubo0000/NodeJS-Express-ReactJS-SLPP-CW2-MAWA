@@ -1,35 +1,69 @@
-/* Estilos generales */
+/* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-}
-
-/* Contenedor principal */
-.auth-container {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: white;
+  color: #333;
 }
 
-/* Formulario */
-.auth-form {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+/* Auth container styles */
+.auth-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 400px;
   text-align: center;
 }
 
-/* Botones */
+/* Title styles */
+.auth-container h4 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input fields */
+.MuiTextField-root {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+/* Buttons */
 .auth-button {
-  margin-top: 20px;
-  width: 100%;
+  background-color: #2575fc;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-transform: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-button:hover {
+  background-color: #6a11cb;
+  transform: scale(1.05);
+}
+
+/* Links */
+.auth-container a {
+  text-decoration: none;
+  color: #2575fc;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.auth-container a:hover {
+  color: #6a11cb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-container {
+      padding: 30px;
+  }
 }
