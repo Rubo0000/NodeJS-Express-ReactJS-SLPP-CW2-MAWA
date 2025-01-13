@@ -52,6 +52,16 @@ const CommitteeDashboard = ({ token }) => {
             .catch((err) => alert(err.response?.data?.error || 'Something went wrong'));
             console.log(threshold)
     };
+    const deletePetition = (id) => {
+        axios.delete(`http://localhost:5000/slpp/petitions/${id}`, {
+            headers: { Authorization: token },
+        })
+        .then((res) => {
+            alert(res.data.message);
+            setPetitions(petitions.filter((petition) => petition.petition_id !== id));
+        })
+        .catch((err) => alert(err.response?.data?.error || 'Something went wrong'));
+    };
     
 
     const closePetition = (id) => {
@@ -119,6 +129,14 @@ const CommitteeDashboard = ({ token }) => {
                                         >
                                             Close Petition
                                         </Button>
+                                        <Button
+    variant="contained"
+    color="error"
+    style={{ marginTop: '10px' }}
+    onClick={() => deletePetition(petition.petition_id)}
+>
+    Delete Petition
+</Button>
                                     </Box>
                                 )}
                             </CardContent>
